@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-int task1(int dial_value)
+int Task1(int dial_value)
 {
     int amount_of_zeros = 0;
     
@@ -23,7 +23,7 @@ int task1(int dial_value)
     return amount_of_zeros;
 }
 
-int task2(int dial_value)
+int Task2(int dial_value)
 {
     int amount_of_zeros = 0;
 
@@ -62,8 +62,8 @@ int task2(int dial_value)
 int main()
 {
     int start_value = 50;
-    std::cout << "Result task 1: " << task1(start_value) << std::endl;
-    std::cout << "Result task 2: " << task2(start_value) << std::endl;
+    std::cout << "Result Task 1: " << Task1(start_value) << std::endl;
+    std::cout << "Result Task 2: " << Task2(start_value) << std::endl;
 
     return 0;
 }

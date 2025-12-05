@@ -24,8 +24,8 @@ std::vector<Input> ParseInputFile() {
     return input;
 }
 
-very_large_type task1(const std::vector<Input>& input) {
-    very_large_type invalid_sum = 0;
+very_large_type Task1(const std::vector<Input>& input) {
+    very_large_type invalidSum = 0;
     for (const auto&[firstId, lastId] : input) {
         for (very_large_type j = firstId; j <= lastId; j++) {
             std::string curNum = std::to_string(j);
@@ -35,15 +35,15 @@ very_large_type task1(const std::vector<Input>& input) {
             std::string str2 = curNum.substr(curNum.length() / 2);
 
             if (str1 == str2) {
-                invalid_sum += j;
+                invalidSum += j;
             }
         }
     }
-    return invalid_sum;
+    return invalidSum;
 }
 
-very_large_type task2(const std::vector<Input>& input) {
-    very_large_type invalid_sum = 0;
+very_large_type Task2(const std::vector<Input>& input) {
+    very_large_type invalidSum = 0;
 
     std::vector<std::string> invalidStrings;
     for (const auto&[firstId, lastId] : input) {
@@ -71,18 +71,18 @@ very_large_type task2(const std::vector<Input>& input) {
 
                 if (isInvalid) {
                     invalidStrings.push_back(curNum);
-                    invalid_sum += j;
+                    invalidSum += j;
                     break;
                 }
             }
         }
     }
-    return invalid_sum;
+    return invalidSum;
 }
 
 int main() {
     const std::vector<Input> input = ParseInputFile();
-    std::cout << "Result from first task: " << task1(input) << std::endl;
-    std::cout << "Result from second task: " << task2(input) << std::endl;
+    std::cout << "Result from first Task: " << Task1(input) << std::endl;
+    std::cout << "Result from second Task: " << Task2(input) << std::endl;
     return 0;
 }
