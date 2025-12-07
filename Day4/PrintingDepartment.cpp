@@ -30,8 +30,8 @@ vector<RemovableRoll> CalculateRemovableRolls(const Map& paperMap) {
     const int H = static_cast<int>(paperMap.size()), W = static_cast<int>(paperMap[0].size());
     const vector<std::pair<int,int>> offsets {{
         {-1,-1},{-1,0},{-1,1},
-        {0,-1},               {0,1},
-        {1,-1}, {1,0}, {1,1}
+        {0,-1},{0,1},
+        {1,-1},{1,0},{1,1}
     }};
 
     vector<RemovableRoll> removableRolls;
