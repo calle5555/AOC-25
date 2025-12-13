@@ -45,7 +45,7 @@ long long Task2() {
 
     ifstream file("input/input.txt");
     string str;
-    while(std::getline(file, str)) {
+    while(getline(file, str)) {
         const size_t delimIndex = str.find('-');
         if (delimIndex == string::npos) continue;
 

@@ -16,7 +16,7 @@ Input ParseInput() {
 
     ifstream file("input/input.txt");
     string str;
-    while(std::getline(file, str)) {
+    while(getline(file, str)) {
         vector<char> row;
         for (int i = 0; i < str.length(); i++) {
             if (str[i] == 'S') {

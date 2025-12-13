@@ -14,10 +14,10 @@ struct RemovableRoll {
 Map ReadPaperMap() {
     Map paperMap;
 
-    std::ifstream file("input/input.txt");
-    std::string str;
-    while(std::getline(file, str)) {
-        std::vector<int> mapRow(static_cast<int>(str.length()), 0);
+    ifstream file("input/input.txt");
+    string str;
+    while(getline(file, str)) {
+        vector<int> mapRow(static_cast<int>(str.length()), 0);
         for(int i = 0; i < str.length(); i++) {
             mapRow[i] = str[i] == '@' ? 1 : 0;
         }
@@ -28,7 +28,7 @@ Map ReadPaperMap() {
 
 vector<RemovableRoll> CalculateRemovableRolls(const Map& paperMap) {
     const int H = static_cast<int>(paperMap.size()), W = static_cast<int>(paperMap[0].size());
-    const vector<std::pair<int,int>> offsets {{
+    const vector<pair<int,int>> offsets {{
         {-1,-1},{-1,0},{-1,1},
         {0,-1},{0,1},
         {1,-1},{1,0},{1,1}

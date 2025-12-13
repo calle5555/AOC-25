@@ -17,7 +17,7 @@ vector<Problem> ParseInput() {
     vector<string> lines;
     ifstream file("input/input.txt");
     string str;
-    while(std::getline(file, str)) {
+    while(getline(file, str)) {
         str.erase(std::remove(str.begin(), str.end(), '\0'), str.end());
         lines.push_back(str);
     }
