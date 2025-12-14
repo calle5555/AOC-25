@@ -1,6 +1,6 @@
 import pulp
 
-def parse_input(file_path="input/input.txt"):
+def ParseInput(file_path="input/input.txt"):
     machines = []
     with open(file_path, 'r') as f:
         for line in f:
@@ -21,7 +21,7 @@ def parse_input(file_path="input/input.txt"):
     return machines
 
 
-def solve_machine(machine):
+def SolveMachine(machine):
     buttons = machine['buttons']
     goalStateJoltages = machine['goalStateJoltages']
     n = len(goalStateJoltages)
@@ -45,7 +45,7 @@ def solve_machine(machine):
 
 if __name__ == "__main__":
     result = 0
-    for machine in parse_input():
-        result += solve_machine(machine)
+    for machine in ParseInput():
+        result += SolveMachine(machine)
 
     print(result)
